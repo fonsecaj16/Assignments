@@ -6,6 +6,9 @@ public class Chest : MonoBehaviour
 {
 
     [SerializeField] public List<Item> itemList;
+
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +19,7 @@ public class Chest : MonoBehaviour
         }
         if(sum!=100)
         {
+            
             Debug.LogError("Probability sum must be equal to 100");
         }
     }
