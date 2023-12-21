@@ -16,12 +16,12 @@ public class ShotGun : ReloadableWeaponBase
     {
         Debug.Log("Shooting Shotgun");
         wasteAmmo(3);
-        spawnBullet(0);
-        spawnBullet(1);
-        spawnBullet(2);
-        spawnBullet(3);        
+        SpawnBullet(0);
+        SpawnBullet(1);
+        SpawnBullet(2);
+        SpawnBullet(3);        
     }
-    private void spawnBullet(int direction)
+    private void SpawnBullet(int direction)
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Vector3 shootDirection = Vector3.forward;

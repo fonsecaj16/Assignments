@@ -14,9 +14,7 @@ public class Sniper : ReloadableWeaponBase
     protected void ShootInternal()
     {
         Debug.Log("Shooting Sniper");
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        bullet.GetComponent<Rigidbody>().AddForce(Vector3.forward * projectileSpeed);
-        Destroy(bullet, 2);
+        SpawnBullet();
 
     }
 }

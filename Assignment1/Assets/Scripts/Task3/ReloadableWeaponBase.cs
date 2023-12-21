@@ -50,6 +50,13 @@ public abstract class ReloadableWeaponBase : MonoBehaviour, IWeapon
         ShootInternal();
         ReadyText();
     }
+
+    protected void SpawnBullet()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        bullet.GetComponent<Rigidbody>().AddForce(Vector3.forward * projectileSpeed);
+        Destroy(bullet, 2);
+    }
     public void wasteAmmo(int ammount)
     {
         _ammunition -= ammount;
